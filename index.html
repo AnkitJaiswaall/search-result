@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- header and side navbar-->
+    <header class="header">
+      <div>
+        <nav>
+          <div class="sidebar">
+            <a href="" class="active"
+              ><img
+                style="height: 30px; width: 30px"
+                src="./images/icons8-menu-50.png"
+                alt=""
+              />
+            </a>
+            <a><img src="./images/home.png" alt="" />Home</a>
+            <a
+              ><img
+                height="30px; width:30px"
+                src="./images/profiles.png"
+                alt=""
+              />Profile</a
+            >
+          </div>
+        </nav>
+        <div class="container-logo">
+          <img
+            style="height: 80px; width: 80px"
+            src="./images/logo.png"
+            alt=""
+          />
+          <input
+            type="text"
+            placeholder="Search using Weosite URL. Business Name, Product and more..."
+          /><img
+            style="
+              background-color: #15ae75;
+              padding: 10px;
+              padding-left: 20px;
+              padding-right: 20px;
+            "
+            src="./images/searchIcon.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="container-profile">
+        <img src="./images/question-mark.png" alt="" />
+        <img width="30px" height="30px" src="./images/bell.png" alt="" />
+        <span
+          style="
+            background-color: red;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-left: -45px;
+            margin-top: -15px;
+            margin-right: 20px;
+          "
+          >2</span
+        >
+        <img src="./images/profilePic.png" alt="" />
+        <span style="color: #a9a9ab; margin-left: -20px">Julia Michaels</span>
+        <img src="./images/moreDetails.png" alt="" />
+      </div>
+    </header>
+    <main style="display: flex">
+      <!-- filters -->
+      <div class="filter">
+        <div class="heading-container">
+          <div class="heading">FILTERS TO FIND PROSPECTS</div>
+          <div class="description">
+            These Filters helo refine vour search results across various Signals
+            and Segments.
+          </div>
+        </div>
+        <hr />
+        <div class="category">
+          <div class="cat-filter">
+            <div>CATEGORIES</div>
+            <img src="./images/down.png" alt="" />
+          </div>
+          <div>
+            <img class="search" src="./images/search.png" alt="" />
+            <input type="text" placeholder="          Search Categories" />
+          </div>
+          <div>
+            <div class="filter-check">
+              <input class="test" checked type="checkbox" value="ATV Dealer" />
+              <label class="category-text">AT Dealer</label>
+            </div>
+            <div class="filter-check">
+              <input
+                class="test"
+                checked
+                type="checkbox"
+                value="ATV Repair Shop"
+              />
+              <label class="category-text">ATV Repair Shop</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" type="checkbox" value="Abbey" />
+              <label class="category-text">Abbey</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" type="checkbox" value="Abrasives Supplier" />
+              <label class="category-text">Abrasives Supplier</label>
+            </div>
+            <div class="filter-check">
+              <input
+                class="test"
+                type="checkbox"
+                value="Abundant Life Church"
+              />
+              <label class="category-text">Abundant Life Church</label>
+            </div>
+            <div id="moreCheckbox" class="filter-check more-checkbox">
+              <label
+                style="margin-left: 20px; margin-top: -10px; font-size: 15px"
+                class="category-text"
+                >More...</label
+              >
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <hr />
+          </div>
+          <div class="website">
+            <div class="cat-filter">
+              <div>WEBSITE</div>
+              <div>
+                <div class="button b2" id="button-10">
+                  <input class="checkbox" type="checkbox" />
+                  <div class="knobs">
+                    <span style="color: white; font-size: 12px">AND</span>
+                  </div>
+                  <div class="layer"></div>
+                </div>
+                <img
+                  style="margin-left: 100px; display: flex; margin-top: -20px"
+                  src="./images/down.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div style="margin-top: -10px" class="feature-list">
+              <div style="font-size: 15px" class="function">Website</div>
+              <div>
+                <div class="tri-state-toggle">
+                  <button
+                    class="tri-state-toggle-button active"
+                    id="toggle-website-1"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-website-2"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-website-3"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="feature-list">
+              <div style="margin-top: -30px; font-size: 15px" class="function">
+                Responsive
+              </div>
+              <div style="margin-top: -30px">
+                <div class="tri-state-toggle">
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-responsive-1"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-responsive-2"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button active"
+                    id="toggle-responsive-3"
+                  ></button>
+                </div>
+              </div>
+            </div>
+            <div class="feature-list">
+              <div style="margin-top: -35px; font-size: 15px" class="function">
+                Mobile
+              </div>
+              <div style="margin-top: -35px">
+                <div class="tri-state-toggle">
+                  <button
+                    class="tri-state-toggle-button active"
+                    id="toggle-mobile-1"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-mobile-2"
+                  ></button>
+                  <button
+                    class="tri-state-toggle-button"
+                    id="toggle-mobile-3"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr style="margin-top: -15px" />
+          <div class="language">
+            <div style="margin-top: 15px" class="cat-filter">
+              <div style="font-size: 16px">PRIMARY LANGUAGES</div>
+              <div>
+                <div class="button b2" id="button-10">
+                  <input class="checkbox" type="checkbox" />
+                  <div class="knobs">
+                    <span style="color: white; font-size: 12px">AND</span>
+                  </div>
+                  <div class="layer"></div>
+                </div>
+                <img
+                  style="margin-left: 100px; display: flex; margin-top: -20px"
+                  src="./images/down.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <img class="search" src="./images/search.png" alt="" />
+              <input type="text" placeholder="          Search Categories" />
+            </div>
+            <div class="filter-check">
+              <input class="test" checked type="checkbox" value="ATV Dealer" />
+              <label class="category-text">Catalan (Valencia)</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" checked type="checkbox" value="ATV Dealer" />
+              <label class="category-text">Chinese</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" type="checkbox" value="ATV Dealer" />
+              <label class="category-text">English</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" type="checkbox" value="ATV Dealer" />
+              <label class="category-text">French</label>
+            </div>
+            <div class="filter-check">
+              <input class="test" type="checkbox" value="ATV Dealer" />
+              <label class="category-text">German</label>
+            </div>
+            <div id="moreCheckbox" class="filter-check more-checkbox">
+              <label
+                style="margin-left: 20px; margin-top: -10px; font-size: 15px"
+                class="category-text"
+                >More...</label
+              >
+            </div>
+          </div>
+          <hr style="margin-top: 20px" />
+          <div class="cat-filter">
+            <div class="dropdown-header">CONTENT</div>
+            <img class="dropdown-arrow" src="./images/down.png" alt="" />
+          </div>
+          <hr />
+          <div class="cat-filter">
+            <div class="dropdown-header">SOCIAL</div>
+            <img class="dropdown-arrow" src="./images/down.png" alt="" />
+          </div>
+          <hr />
+          <div class="cat-filter">
+            <div class="dropdown-header">SEO</div>
+            <img class="dropdown-arrow" src="./images/down.png" alt="" />
+          </div>
+          <hr />
+          <div class="cat-filter">
+            <div class="dropdown-header">SEM</div>
+            <img class="dropdown-arrow" src="./images/down.png" alt="" />
+          </div>
+          <hr style="margin-bottom: 0px" />
+          <div class="btn-group">
+            <button>CLEAR ALL</button>
+            <button>SAVE</button>
+            <button>ALL</button>
+          </div>
+        </div>
+      </div>
+      <article>
+        <div class="pages">
+          <a style="margin-left: 0px" class="active" href="#"
+            >MY ACCOUNT (78)</a
+          >
+          <a href="#">NEW (75)</a>
+          <a href="#">SAVED SEARCHES (05)</a>
+        </div>
+        <hr
+          style="
+            margin-top: 20px;
+            width: 65vw;
+            height: 1px;
+            background-color: #a9a9ab;
+            border: none;
+          "
+        />
+
+        <div class="sort">
+          <div style="display: flex">
+            <img height="25px" width="25px" src="./images/filter.png" alt="" />
+            <img
+              height="25px"
+              width="25px"
+              src="./images/down-arrow.png"
+              alt=""
+            />
+            <span style="margin-left: 10px; color: #a9a9ab; margin-top: 5px"
+              >Sort by: <span style="color: #15ae75"> Newly Added</span></span
+            ><img src="./images/down.png" alt="" />
+          </div>
+          <div>
+            <span style="font-weight: bold; color: #a9a9ab"
+              >MAP
+              <span style="margin-left: 10px; color: #15ae75">CARD</span></span
+            >
+          </div>
+        </div>
+        <!-- search result data -->
+        <div class="data">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding: 20px 20px 0px 20px;
+            "
+          >
+            <span>
+              <input
+                class="test"
+                type="checkbox"
+                value="Nationwide Automobile"
+              />
+              <label style="font-size: 20px">Nationwide Automobile</label>
+            </span>
+            <button
+              style="
+                text-decoration: none;
+                border: 1px solid #15ae75;
+                background-color: white;
+                color: #15ae75;
+                padding: 5px;
+                width: 50px;
+              "
+            >
+              ADD
+            </button>
+            <!-- Vertical line -->
+            <div class="vertical-line"></div>
+          </div>
+          <div class="contact">
+            <div style="display: grid; grid-template-columns: 9fr 3fr">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 5px;
+                "
+              >
+                <div>
+                  <img src="./images/location.png" alt="" />
+                  <span style="margin-top: -10px"
+                    >26 Prince Street, New York, NY 10012</span
+                  >
+                </div>
+                <div style="color: #15ae75">
+                  <img src="./images/link.png" alt="" /><span
+                    style="margin-top: -10px; margin-left: 5px"
+                    >www.nationwide.com</span
+                  >
+                </div>
+                <div>
+                  <img src="./images/phone.png" alt="" /><span
+                    style="margin-top: -10px"
+                    >(718) 522 9090</span
+                  >
+                </div>
+              </div>
+            </div>
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 15px;
+              "
+            />
+            <div class="info">
+              <div class="info-container">
+                <div class="heading">Age</div>
+                <div>19 Y</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Employees</div>
+                <div>35-50</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Revenue</div>
+                <div>$5-10M</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Locations</div>
+                <div>03</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Contacts</div>
+                <div>06</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Avg. Spend/Mo</div>
+                <div>Unknown</div>
+              </div>
+            </div>
+
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 20px;
+              "
+            />
+
+            <div class="cat-btn">
+              <div>
+                <div>Category(s):</div>
+                <button>Auto Auction</button>
+                <button>Auto Bodv Parts Sunolier</button>
+              </div>
+              <div style="margin-right: 200px">
+                <div>Prospects For:</div>
+                <button>Website</button>
+                <button>Social</button>
+              </div>
+            </div>
+            <div class="source">
+              <div>
+                Source:
+                <img
+                  style="margin-left: 10px; margin-top: -3px"
+                  src="./images/message.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                Updated On:
+                <span style="margin-left: 10px; color: #a9a9ab">Dec 2017</span>
+              </div>
+              <div>
+                <img class="up-arrow" src="./images/up-arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="chart">
+              <div class="sc-gauge">
+                <span style="margin-left: 50px; margin-bottom: 5px"
+                  >- 10 +</span
+                >
+                <div class="sc-background">
+                  <div class="sc-dot"></div>
+                  <div class="sc-percentage green-1"></div>
+                  <!-- Green color -->
+                  <div class="sc-percentage green-2"></div>
+                  <!-- Dark Green color -->
+                  <div class="sc-mask"></div>
+                  <span class="sc-value">88</span>
+                </div>
+                <span class="sc-min">0</span>
+                <span class="sc-max">100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding: 20px 20px 0px 20px;
+            "
+          >
+            <span>
+              <input
+                class="test"
+                type="checkbox"
+                value="Nationwide Automobile"
+              />
+              <label style="font-size: 20px">Nationwide Automobile</label>
+            </span>
+            <button
+              style="
+                text-decoration: none;
+                border: 1px solid #15ae75;
+                background-color: white;
+                color: #15ae75;
+                padding: 5px;
+                width: 50px;
+              "
+            >
+              ADD
+            </button>
+            <!-- Vertical line -->
+            <div class="vertical-line"></div>
+          </div>
+          <div class="contact">
+            <div style="display: grid; grid-template-columns: 9fr 3fr">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 5px;
+                "
+              >
+                <div>
+                  <img src="./images/location.png" alt="" />
+                  <span style="margin-top: -10px"
+                    >26 Prince Street, New York, NY 10012</span
+                  >
+                </div>
+                <div style="color: #15ae75">
+                  <img src="./images/link.png" alt="" /><span
+                    style="margin-top: -10px; margin-left: 5px"
+                    >www.nationwide.com</span
+                  >
+                </div>
+                <div>
+                  <img src="./images/phone.png" alt="" /><span
+                    style="margin-top: -10px"
+                    >(718) 522 9090</span
+                  >
+                </div>
+              </div>
+            </div>
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 15px;
+              "
+            />
+            <div class="info">
+              <div class="info-container">
+                <div class="heading">Age</div>
+                <div>19 Y</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Employees</div>
+                <div>35-50</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Revenue</div>
+                <div>$5-10M</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Locations</div>
+                <div>03</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Contacts</div>
+                <div>06</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Avg. Spend/Mo</div>
+                <div>Unknown</div>
+              </div>
+            </div>
+
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 20px;
+              "
+            />
+
+            <div class="cat-btn">
+              <div>
+                <div>Category(s):</div>
+                <button>Auto Auction</button>
+                <button>Auto Bodv Parts Sunolier</button>
+              </div>
+              <div style="margin-right: 200px">
+                <div>Prospects For:</div>
+                <button>Website</button>
+                <button>Social</button>
+              </div>
+            </div>
+            <div class="source">
+              <div>
+                Source:
+                <img
+                  style="margin-left: 10px; margin-top: -3px"
+                  src="./images/message.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                Updated On:
+                <span style="margin-left: 10px; color: #a9a9ab">Dec 2017</span>
+              </div>
+              <div>
+                <img class="up-arrow" src="./images/up-arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="chart">
+              <div class="sc-gauge">
+                <span style="margin-left: 50px; margin-bottom: 5px"
+                  >- 10 +</span
+                >
+                <div class="sc-background">
+                  <div class="sc-dot"></div>
+                  <div class="sc-percentage green-1"></div>
+                  <!-- Green color -->
+                  <div class="sc-percentage green-2"></div>
+                  <!-- Dark Green color -->
+                  <div class="sc-mask"></div>
+                  <span class="sc-value">88</span>
+                </div>
+                <span class="sc-min">0</span>
+                <span class="sc-max">100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="data">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              padding: 20px 20px 0px 20px;
+            "
+          >
+            <span>
+              <input
+                class="test"
+                type="checkbox"
+                value="Nationwide Automobile"
+              />
+              <label style="font-size: 20px">Nationwide Automobile</label>
+            </span>
+            <button
+              style="
+                text-decoration: none;
+                border: 1px solid #15ae75;
+                background-color: white;
+                color: #15ae75;
+                padding: 5px;
+                width: 50px;
+              "
+            >
+              ADD
+            </button>
+            <!-- Vertical line -->
+            <div class="vertical-line"></div>
+          </div>
+          <div class="contact">
+            <div style="display: grid; grid-template-columns: 9fr 3fr">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 5px;
+                "
+              >
+                <div>
+                  <img src="./images/location.png" alt="" />
+                  <span style="margin-top: -10px"
+                    >26 Prince Street, New York, NY 10012</span
+                  >
+                </div>
+                <div style="color: #15ae75">
+                  <img src="./images/link.png" alt="" /><span
+                    style="margin-top: -10px; margin-left: 5px"
+                    >www.nationwide.com</span
+                  >
+                </div>
+                <div>
+                  <img src="./images/phone.png" alt="" /><span
+                    style="margin-top: -10px"
+                    >(718) 522 9090</span
+                  >
+                </div>
+              </div>
+            </div>
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 15px;
+              "
+            />
+            <div class="info">
+              <div class="info-container">
+                <div class="heading">Age</div>
+                <div>19 Y</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Employees</div>
+                <div>35-50</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Revenue</div>
+                <div>$5-10M</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Locations</div>
+                <div>03</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Contacts</div>
+                <div>06</div>
+              </div>
+              <div class="info-container">
+                <div class="heading">Avg. Spend/Mo</div>
+                <div>Unknown</div>
+              </div>
+            </div>
+
+            <hr
+              style="
+                margin-right: 200px;
+                margin-left: 8px;
+                color: #cacaca;
+                height: 1px;
+                background-color: #cacaca;
+                border: none;
+                margin-top: 20px;
+              "
+            />
+
+            <div class="cat-btn">
+              <div>
+                <div>Category(s):</div>
+                <button>Auto Auction</button>
+                <button>Auto Bodv Parts Sunolier</button>
+              </div>
+              <div style="margin-right: 200px">
+                <div>Prospects For:</div>
+                <button>Website</button>
+                <button>Social</button>
+              </div>
+            </div>
+            <div class="source">
+              <div>
+                Source:
+                <img
+                  style="margin-left: 10px; margin-top: -3px"
+                  src="./images/message.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                Updated On:
+                <span style="margin-left: 10px; color: #a9a9ab">Dec 2017</span>
+              </div>
+              <div>
+                <img class="up-arrow" src="./images/up-arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="chart">
+              <div class="sc-gauge">
+                <span style="margin-left: 50px; margin-bottom: 5px"
+                  >- 10 +</span
+                >
+                <div class="sc-background">
+                  <div class="sc-dot"></div>
+                  <div class="sc-percentage green-1"></div>
+                  <!-- Green color -->
+                  <div class="sc-percentage green-2"></div>
+                  <!-- Dark Green color -->
+                  <div class="sc-mask"></div>
+                  <span class="sc-value">88</span>
+                </div>
+                <span class="sc-min">0</span>
+                <span class="sc-max">100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="get-more">
+          <div>
+            We can try and fetch more results via an external source. Oki
+            <span style="color: #15ae75">Get me more</span>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".tri-state-toggle-button").click(function () {
+        // Remove the active class from all buttons within the same group
+        $(this).siblings().removeClass("active");
+        // Add the active class to the clicked button
+        $(this).addClass("active");
+      });
+    });
+    $(document).ready(function () {
+      $(".pages a").click(function (event) {
+        event.preventDefault();
+        $(".pages a").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+</html>
